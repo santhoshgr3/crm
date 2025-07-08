@@ -1,0 +1,5 @@
+{
+    "terminal.integrated.altClickMovesCursor": true,
+    "terminal.integrated.allowMnemonics": true,
+    "terminal.integrated.copyOnSelection": true
+}
