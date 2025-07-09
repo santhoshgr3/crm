@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { CRMProvider } from './context/CRMContext';
-import Layout from './components/Layout/Layout';
+import ModernLayout from './components/Layout/ModernLayout';
 import LoginForm from './components/Auth/LoginForm';
-import Dashboard from './pages/Dashboard';
+import ModernDashboard from './pages/ModernDashboard';
 import Leads from './pages/Leads';
 import KanbanBoard from './components/Kanban/KanbanBoard';
 import Courses from './pages/Courses';
@@ -57,8 +57,8 @@ function App() {
     <CRMProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Layout onLogout={handleLogout} />}>
-            <Route index element={<Dashboard />} />
+          <Route path="/" element={<ModernLayout onLogout={handleLogout} />}>
+            <Route index element={<ModernDashboard />} />
             <Route path="leads" element={<Leads />} />
             <Route path="kanban" element={<KanbanBoard />} />
             <Route path="courses" element={<Courses />} />
